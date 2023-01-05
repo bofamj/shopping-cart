@@ -1,8 +1,7 @@
 import React from "react";
-import Nave from "./nave/Nave";
 
 const Home = () => {
-  return <Nave />;
+  return <h1>home</h1>;
 };
 
 export default Home;

@@ -1,0 +1,30 @@
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 6rem;
+  border: 0.1rem solid rgb(179, 179, 179);
+  border-width: 0 0 2px 0;
+  margin-bottom: 1.5em;
+}
+.img-continer {
+  width: 7rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.cart-img {
+  width: 100%;
+}
+.quatity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7%;
+}
+.quantity-btn {
+  cursor: pointer;
+}
+.quantity-btn:hover {
+  scale: 0.9;
+}

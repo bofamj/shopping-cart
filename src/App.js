@@ -9,7 +9,7 @@ function App() {
   const [cart, setCart] = useState([]);
   return (
     <>
-      <Nave />
+      <Nave cart={cart} />
 
       <Routes>
         <Route path="/" element={<Home cart={cart} setCart={setCart} />} />

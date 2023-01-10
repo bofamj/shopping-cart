@@ -5,7 +5,7 @@ const Home = ({ cart, setCart }) => {
   return (
     <>
       <Hero />
-      <Products setCart={setCart} />
+      <Products setCart={setCart} cart={cart} />
     </>
   );
 };

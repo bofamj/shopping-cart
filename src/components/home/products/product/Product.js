@@ -1,10 +1,10 @@
+//import Cart from "../../../cart/cart-comp/Cart";
 import "./product.css";
 
-const Product = ({ setCart, product }) => {
+const Product = ({ setCart, product, cart }) => {
   const addToCart = (e) => {
-    const item = e.target.value;
-
-    console.log(item);
+    // const item = e.target.value;
+    setCart([...cart, product]);
   };
   return (
     <div className="container">

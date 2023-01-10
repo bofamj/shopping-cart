@@ -2,18 +2,18 @@ import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 import { faSquareMinus } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import img from "../../../assets/laptops.jpg";
+
 import "./cart.css";
 
-const Cart = () => {
+const Cart = ({ item }) => {
   return (
     <div className="cart-container ">
       <div className="img-continers">
-        <img src={img} className="cart-img" alt="cart img" />
+        <img src={item.image} className="cart-img" alt="cart img" />
       </div>
 
       <div className="name">
-        <h3>name</h3>
+        <h3>{item.name}</h3>
       </div>
       <div className="quantity-price-sec">
         <div className="quatity">
@@ -22,7 +22,7 @@ const Cart = () => {
           <FontAwesomeIcon icon={faSquareMinus} className="quantity-btn" />
         </div>
         <div className="price">
-          <h4>100 $</h4>
+          <h4>{item.price}</h4>
         </div>
       </div>
     </div>

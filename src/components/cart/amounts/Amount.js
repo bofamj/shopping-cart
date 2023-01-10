@@ -2,7 +2,7 @@ import "./amount.css";
 
 const Amount = () => {
   return (
-    <>
+    <div className="div">
       <div className="amount-sec soubtotal">
         <h2>Subtotal</h2>
         <p>300 $</p>
@@ -17,7 +17,7 @@ const Amount = () => {
         <p>293.78 $</p>
       </div>
       <button className="checkout-btn">Checkoout</button>
-    </>
+    </div>
   );
 };
 

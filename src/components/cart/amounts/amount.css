@@ -1,3 +1,6 @@
+.div {
+  width: 100%;
+}
 .amount-sec {
   display: flex;
   justify-content: space-between;
@@ -10,17 +13,19 @@
   background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
   background-color: #63b8ee;
   border-radius: 8px;
-  border: 2px solid #3866a3;
-  display: inline-block;
+  /* border: 2px solid #3866a3; */
+  border: none;
   cursor: pointer;
   color: #14396a;
   font-family: Arial;
-  font-size: 18px;
+  font-size: 1.1em;
   font-weight: bold;
-  padding: 9px 35px;
+  padding: 0.75em 2.3em;
   text-decoration: none;
   text-shadow: -1px 1px 0px #7cacde;
-  margin: 0 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .checkout-btn:hover {
   background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);

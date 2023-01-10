@@ -23,7 +23,13 @@ const Nave = () => {
             </li>
             <li>
               <Link to="/cart" className="links">
-                <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
+                <div className="cart-icon-container">
+                  <p className="icon-nom">0</p>
+                  <FontAwesomeIcon
+                    icon={faCartShopping}
+                    className="cart-icon"
+                  />
+                </div>
                 Cart
               </Link>
             </li>

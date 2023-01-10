@@ -7,9 +7,9 @@
 }
 .nav-wrapper {
   display: flex;
-  width: 100%;
   padding: 0.5em 0;
-  justify-content: space-around;
+  margin-left: 3.5em;
+  justify-content: space-between;
   align-items: center;
   color: white;
 }
@@ -18,7 +18,7 @@
   height: 2.5em;
 }
 .nav-items {
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: end;
 }
@@ -28,8 +28,17 @@
   align-items: center;
   justify-content: space-around;
 }
+.cart-icon-container {
+  display: inline-block;
+  position: relative;
+}
 .cart-icon {
   padding-right: 3px;
+}
+.icon-nom {
+  position: absolute;
+  top: -13px;
+  left: 4px;
 }
 .links {
   color: white;

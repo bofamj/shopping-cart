@@ -1,11 +1,11 @@
 import Hero from "./hero/Hero";
 import Products from "./products/Products";
 
-const Home = () => {
+const Home = ({ cart, setCart }) => {
   return (
     <>
       <Hero />
-      <Products />
+      <Products setCart={setCart} />
     </>
   );
 };

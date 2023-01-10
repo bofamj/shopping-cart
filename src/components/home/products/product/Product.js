@@ -1,25 +1,26 @@
-import laptop from "../../../.././assets/laptops.jpg";
 import "./product.css";
 
-const Product = () => {
+const Product = ({ setCart, product }) => {
+  const addToCart = (e) => {
+    const item = e.target.value;
+
+    console.log(item);
+  };
   return (
     <div className="container">
       <div className="img-continer">
-        <img src={laptop} alt="laptop" className="product-img" />
+        <img src={product.image} alt="laptop" className="product-img" />
       </div>
       <div className="des-continer">
-        <h1 className="title">product title</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-        </p>
+        <h1 className="title">{product.name}</h1>
+        <p>{product.desc}</p>
         <div className="foter">
           <p>
-            price <span>100$</span>
+            price <span>{product.price}$</span>
           </p>
-          <button className="add-button">Add to cart</button>
+          <button className="add-button" value={product} onClick={addToCart}>
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

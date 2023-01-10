@@ -1,0 +1,32 @@
+import iphon from "../assets/apple-iphone-x-new-1.webp";
+import laptop from "../assets/laptops.jpg";
+export const productsData = [
+  {
+    id: 1,
+    name: "iPhone 7",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: "$1.99",
+    image: iphon,
+  },
+  {
+    id: 2,
+    name: "iPhone X",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: "$1.99",
+    image: iphon,
+  },
+  {
+    id: 3,
+    name: "laptop",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: "$1.99",
+    image: laptop,
+  },
+  {
+    id: 4,
+    name: "iPhone 5",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: "$1.99",
+    image: iphon,
+  },
+];

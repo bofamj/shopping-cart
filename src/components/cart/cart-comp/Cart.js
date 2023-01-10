@@ -8,7 +8,7 @@ import "./cart.css";
 const Cart = () => {
   return (
     <div className="cart-container ">
-      <div className="img-continer">
+      <div className="img-continers">
         <img src={img} className="cart-img" alt="cart img" />
       </div>
 

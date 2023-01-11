@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./nave.css";
 import logo from "../../.././assets/—Pngtree—shopping logo deisgn modern style_8549828.png";
 
-const Nave = ({ cart }) => {
+const Nave = ({ totalQuantity }) => {
   return (
     <nav className="nav ">
       <div className="nav-wrapper">
@@ -24,7 +24,7 @@ const Nave = ({ cart }) => {
             <li>
               <Link to="/cart" className="links">
                 <div className="cart-icon-container">
-                  <p className="icon-nom">{cart.length}</p>
+                  <p className="icon-nom">{totalQuantity}</p>
                   <FontAwesomeIcon
                     icon={faCartShopping}
                     className="cart-icon"

@@ -2,8 +2,7 @@ import "./carts.css";
 import Cart from "./cart-comp/Cart";
 import Amount from "./amounts/Amount";
 
-const Carts = ({ cart }) => {
-  console.log(cart);
+const Carts = ({ cart, totalPrice }) => {
   return (
     <div className="carts-container">
       {/* <h1 className="cart-name">Your cart</h1> */}
@@ -13,7 +12,7 @@ const Carts = ({ cart }) => {
         ))}
       </div>
       <div className="amount-section">
-        <Amount />
+        <Amount totalPrice={totalPrice} />
       </div>
     </div>
   );

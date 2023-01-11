@@ -17,8 +17,12 @@ const Cart = ({ item }) => {
       </div>
       <div className="quantity-price-sec">
         <div className="quatity">
-          <FontAwesomeIcon icon={faSquarePlus} className="quantity-btn" />
-          <p>1</p>
+          <FontAwesomeIcon
+            icon={faSquarePlus}
+            className="quantity-btn"
+            onClick={(e) => console.log(e.target.value)}
+          />
+          <p value={item.qun}>{item.qun}</p>
           <FontAwesomeIcon icon={faSquareMinus} className="quantity-btn" />
         </div>
         <div className="price">

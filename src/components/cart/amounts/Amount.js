@@ -1,11 +1,11 @@
 import "./amount.css";
 
-const Amount = () => {
+const Amount = ({ totalPrice }) => {
   return (
     <div className="div">
       <div className="amount-sec soubtotal">
         <h2>Subtotal</h2>
-        <p>300 $</p>
+        <p>{totalPrice} $</p>
       </div>
       <div className="amount-sec tax">
         <h2>Tax</h2>
@@ -14,7 +14,7 @@ const Amount = () => {
       <hr></hr>
       <div className="amount-sec total">
         <h2>Total</h2>
-        <p>293.78 $</p>
+        <p>{totalPrice - 6.22} $</p>
       </div>
       <button className="checkout-btn">Checkoout</button>
     </div>

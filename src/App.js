@@ -8,6 +8,29 @@ import Nave from "./components/home/nave/Nave";
 function App() {
   const [cart, setCart] = useState([]);
 
+  const increment = (id) => {
+    const newItem = cart.map((item) => {
+      if (item.id === id) {
+        item.qun++;
+      }
+      return item;
+    });
+    setCart(newItem);
+  };
+  const decrement = (id) => {
+    const newItem = cart.map((item) => {
+      if (item.id === id) {
+        if (item.qun === 1) {
+          item.qun = 1;
+        } else {
+          item.qun--;
+        }
+      }
+      return item;
+    });
+    setCart(newItem);
+  };
+
   let { totalPrice, totalQuantity } = cart.reduce(
     (acc, item) => {
       const { qun, price } = item;
@@ -30,7 +53,14 @@ function App() {
         <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
         <Route
           path="/cart"
-          element={<Carts cart={cart} totalPrice={totalPrice} />}
+          element={
+            <Carts
+              cart={cart}
+              totalPrice={totalPrice}
+              increment={increment}
+              decrement={decrement}
+            />
+          }
         />
       </Routes>
     </>

@@ -28,6 +28,18 @@
 .quantity-btn:hover {
   scale: 0.9;
 }
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.remove-btn {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  color: rgb(0, 145, 255);
+}
 @media screen and (max-width: 750px) {
   /* .carts-section {
     width: 100%;

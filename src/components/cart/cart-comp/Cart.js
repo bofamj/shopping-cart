@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./cart.css";
 
-const Cart = ({ item }) => {
+const Cart = ({ item, increment, decrement }) => {
+  /*  console.log(item); */
   return (
     <div className="cart-container ">
       <div className="img-continers">
@@ -13,20 +14,23 @@ const Cart = ({ item }) => {
       </div>
 
       <div className="name">
-        <h3>{item.name}</h3>
+        <h2>{item.name}</h2>
+        <p>{item.price}$</p>
+        <button className="remove-btn">Remove</button>
       </div>
       <div className="quantity-price-sec">
         <div className="quatity">
           <FontAwesomeIcon
             icon={faSquarePlus}
             className="quantity-btn"
-            onClick={(e) => console.log(e.target.value)}
+            onClick={() => increment(item.id)}
           />
           <p value={item.qun}>{item.qun}</p>
-          <FontAwesomeIcon icon={faSquareMinus} className="quantity-btn" />
-        </div>
-        <div className="price">
-          <h4>{item.price}</h4>
+          <FontAwesomeIcon
+            icon={faSquareMinus}
+            className="quantity-btn"
+            onClick={() => decrement(item.id)}
+          />
         </div>
       </div>
     </div>

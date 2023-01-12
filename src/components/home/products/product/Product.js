@@ -3,8 +3,7 @@ import "./product.css";
 
 const Product = ({ setCart, product, cart }) => {
   const { id, image, name, price, desc } = product;
-  const addToCart = (e) => {
-    // const item = e.target.value;
+  const addToCart = (id) => {
     setCart([...cart, { image, name, price, id, qun: 1 }]);
   };
   return (
@@ -19,7 +18,11 @@ const Product = ({ setCart, product, cart }) => {
           <p>
             price <span>{price}$</span>
           </p>
-          <button className="add-button" value={product} onClick={addToCart}>
+          <button
+            className="add-button"
+            value={product}
+            onClick={() => addToCart(id)}
+          >
             Add to cart
           </button>
         </div>

@@ -8,6 +8,7 @@ import Nave from "./components/home/nave/Nave";
 function App() {
   const [cart, setCart] = useState([]);
 
+  //add quntity to a item in the cart
   const increment = (id) => {
     const newItem = cart.map((item) => {
       if (item.id === id) {
@@ -17,6 +18,8 @@ function App() {
     });
     setCart(newItem);
   };
+
+  //decrease quntity to a item in the cart
   const decrement = (id) => {
     const newItem = cart.map((item) => {
       if (item.id === id) {
@@ -31,6 +34,17 @@ function App() {
     setCart(newItem);
   };
 
+  //remove item from cart
+
+  const removeItem = (id) => {
+    const newItem = cart.filter((item) => {
+      if (item.id !== id) {
+        return item;
+      }
+      //return item;
+    });
+    setCart(newItem);
+  };
   let { totalPrice, totalQuantity } = cart.reduce(
     (acc, item) => {
       const { qun, price } = item;
@@ -59,6 +73,7 @@ function App() {
               totalPrice={totalPrice}
               increment={increment}
               decrement={decrement}
+              removeItem={removeItem}
             />
           }
         />

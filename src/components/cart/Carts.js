@@ -2,7 +2,7 @@ import "./carts.css";
 import Cart from "./cart-comp/Cart";
 import Amount from "./amounts/Amount";
 
-const Carts = ({ cart, totalPrice, increment, decrement }) => {
+const Carts = ({ cart, totalPrice, increment, decrement, removeItem }) => {
   return (
     <div className="carts-container">
       {/* <h1 className="cart-name">Your cart</h1> */}
@@ -13,6 +13,7 @@ const Carts = ({ cart, totalPrice, increment, decrement }) => {
             item={item}
             increment={increment}
             decrement={decrement}
+            removeItem={removeItem}
           />
         ))}
       </div>

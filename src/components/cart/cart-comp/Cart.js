@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./cart.css";
 
-const Cart = ({ item, increment, decrement }) => {
+const Cart = ({ item, increment, decrement, removeItem }) => {
   /*  console.log(item); */
   return (
     <div className="cart-container ">
@@ -16,7 +16,9 @@ const Cart = ({ item, increment, decrement }) => {
       <div className="name">
         <h2>{item.name}</h2>
         <p>{item.price}$</p>
-        <button className="remove-btn">Remove</button>
+        <button className="remove-btn" onClick={() => removeItem(item.id)}>
+          Remove
+        </button>
       </div>
       <div className="quantity-price-sec">
         <div className="quatity">

@@ -41,7 +41,6 @@ function App() {
       if (item.id !== id) {
         return item;
       }
-      //return item;
     });
     setCart(newItem);
   };

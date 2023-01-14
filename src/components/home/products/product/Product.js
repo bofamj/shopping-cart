@@ -1,11 +1,20 @@
 //import Cart from "../../../cart/cart-comp/Cart";
+import { useEffect } from "react";
 import "./product.css";
 
 const Product = ({ setCart, product, cart }) => {
   const { id, image, name, price, desc } = product;
   const addToCart = (id) => {
-    setCart([...cart, { image, name, price, id, qun: 1 }]);
+    const isEsest = cart.find((item) => item.id === id);
+    if (isEsest) {
+      isEsest.qun++;
+      return setCart(cart, isEsest);
+    } else {
+      setCart([...cart, { image, name, price, id, qun: 1 }]);
+    }
   };
+  useEffect(() => {}, [cart]);
+
   return (
     <div className="container">
       <div className="img-continer">
@@ -32,3 +41,21 @@ const Product = ({ setCart, product, cart }) => {
 };
 
 export default Product;
+/* if (cart.length === 0) {
+      setCart([...cart, { image, name, price, id, qun: 1 }]);
+    }
+    console.log(cart);
+    if (cart.length > 0) {
+      //console.log(cart);
+      const nweItem = cart.find((item) => {
+        if (item.id === id) {
+          item.qun++;
+          console.log(item);
+        }
+        return item;
+      });
+      setCart([...cart, nweItem]);
+    } else {
+      setCart([...cart, { image, name, price, id, qun: 1 }]);
+      console.log(cart);
+    } */

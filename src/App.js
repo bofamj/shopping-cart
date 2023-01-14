@@ -45,6 +45,7 @@ function App() {
     });
     setCart(newItem);
   };
+
   let { totalPrice, totalQuantity } = cart.reduce(
     (acc, item) => {
       const { qun, price } = item;

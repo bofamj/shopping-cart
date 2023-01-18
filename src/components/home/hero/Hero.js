@@ -1,4 +1,4 @@
-import home from "../../.././assets/pngegg.png";
+import home from "../../.././assets/tamanna-rumee-eD1RNYzzUxc-unsplash.jpg";
 import "./hero.css";
 
 const Hero = () => {

@@ -1,7 +1,7 @@
 import "./carts.css";
 import Cart from "./cart-comp/Cart";
 import Amount from "./amounts/Amount";
-import { useState } from "react";
+
 import Lodding from "../lodding/Lodding";
 
 const Carts = ({

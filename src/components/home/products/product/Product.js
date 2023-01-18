@@ -1,10 +1,11 @@
 import "./product.css";
 
-const Product = ({ setCart, product, cart }) => {
+const Product = ({ setCart, product, cart, setLodding }) => {
   const { id, image, name, price, desc, isAdded } = product;
 
   //* add the product to the cart
   const addToCart = (product) => {
+    setLodding(true);
     //* aerch if the product has already been added
     const isExsist = cart.find((item) => item.id === product.id);
 
@@ -33,6 +34,7 @@ const Product = ({ setCart, product, cart }) => {
     } else {
       setCart([...cart, { id, image, name, price, desc, qun: 1 }]);
     }
+    setLodding(false);
   };
   return (
     <div className="container">

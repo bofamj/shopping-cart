@@ -8,45 +8,8 @@ import { productsData } from "./dummy/data";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [lodding, setLodding] = useState(false);
 
-  /*  const addToCart = (id) => {
-    if (cart.length === 0) {
-      const items = productsData.find((item) => item.id === id);
-      setCart([
-        ...cart,
-        {
-          image: items.image,
-          name: items.name,
-          price: items.price,
-          id: items.id,
-          qun: 1,
-          isAdded: items.isAdded,
-        },
-      ]);
-    }
-    if (cart.length > 0) {
-      const isExsist = cart.find((item) => {
-        if (item.id === id) {
-          item.isAdded = true;
-          console.log(item.id, item);
-        } else {
-          const items = productsData.find((item) => item.id === id);
-          setCart([
-            ...cart,
-            {
-              image: items.image,
-              name: items.name,
-              price: items.price,
-              id: items.id,
-              qun: 1,
-              isAdded: items.isAdded,
-            },
-          ]);
-        }
-      });
-    }
-  };
- */
   //*add quntity to a item in the cart
   const increment = (id) => {
     const newItem = cart.map((item) => {
@@ -103,7 +66,12 @@ function App() {
       <Nave totalQuantity={totalQuantity} />
 
       <Routes>
-        <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
+        <Route
+          path="/"
+          element={
+            <Home cart={cart} setCart={setCart} setLodding={setLodding} />
+          }
+        />
         <Route
           path="/cart"
           element={
@@ -113,6 +81,7 @@ function App() {
               increment={increment}
               decrement={decrement}
               removeItem={removeItem}
+              lodding={lodding}
             />
           }
         />

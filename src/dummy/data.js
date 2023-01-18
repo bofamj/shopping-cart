@@ -8,6 +8,7 @@ export const productsData = [
     price: 100.99,
     image: iphon,
     qun: 5,
+    isAdded: false,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const productsData = [
     price: 1000.99,
     image: iphon,
     qun: 3,
+    isAdded: false,
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export const productsData = [
     price: 1520.99,
     image: laptop,
     qun: 2,
+    isAdded: false,
   },
   {
     id: 4,
@@ -32,5 +35,6 @@ export const productsData = [
     price: 300.99,
     image: iphon,
     qun: 1,
+    isAdded: false,
   },
 ];

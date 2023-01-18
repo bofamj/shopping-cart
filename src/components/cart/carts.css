@@ -22,9 +22,15 @@
   width: 27%;
   height: 20rem;
   margin-top: 0.5em;
-  background-color: #efefef;
+  /* background-color: #efefef;
   box-shadow: 10px 10px 14px -7px #535353;
-  border-radius: 5px;
+  border-radius: 5px; */
+  border-radius: 10px;
+  background: #ebebeb;
+  box-shadow: inset 9px 9px 30px #969696, inset -9px -9px 30px #ffffff;
+}
+.add-some-items {
+  text-align: center;
 }
 @media screen and (max-width: 868px) {
   .carts-container {

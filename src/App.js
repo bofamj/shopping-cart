@@ -1,14 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/home/Home";
 import Carts from "./components/cart/Carts";
 import Nave from "./components/home/nave/Nave";
+import { productsData } from "./dummy/data";
 
 function App() {
   const [cart, setCart] = useState([]);
 
-  //add quntity to a item in the cart
+  /*  const addToCart = (id) => {
+    if (cart.length === 0) {
+      const items = productsData.find((item) => item.id === id);
+      setCart([
+        ...cart,
+        {
+          image: items.image,
+          name: items.name,
+          price: items.price,
+          id: items.id,
+          qun: 1,
+          isAdded: items.isAdded,
+        },
+      ]);
+    }
+    if (cart.length > 0) {
+      const isExsist = cart.find((item) => {
+        if (item.id === id) {
+          item.isAdded = true;
+          console.log(item.id, item);
+        } else {
+          const items = productsData.find((item) => item.id === id);
+          setCart([
+            ...cart,
+            {
+              image: items.image,
+              name: items.name,
+              price: items.price,
+              id: items.id,
+              qun: 1,
+              isAdded: items.isAdded,
+            },
+          ]);
+        }
+      });
+    }
+  };
+ */
+  //*add quntity to a item in the cart
   const increment = (id) => {
     const newItem = cart.map((item) => {
       if (item.id === id) {
@@ -19,7 +58,7 @@ function App() {
     setCart(newItem);
   };
 
-  //decrease quntity to a item in the cart
+  //*decrease quntity to a item in the cart
   const decrement = (id) => {
     const newItem = cart.map((item) => {
       if (item.id === id) {
@@ -34,7 +73,7 @@ function App() {
     setCart(newItem);
   };
 
-  //remove item from cart
+  //*remove item from cart
 
   const removeItem = (id) => {
     const newItem = cart.filter((item) => {

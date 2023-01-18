@@ -10,8 +10,10 @@ element.style {
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #329adb;
-  padding: 7em 3.5em;
+  background-color: #1a2238;
+  padding: 13em 3.5em;
+  overflow: hidden;
+  position: relative;
 }
 .text-container {
   width: 50%;
@@ -24,14 +26,17 @@ element.style {
   width: 50%;
 }
 .hero-img {
-  width: 100%;
-  padding: 2rem;
+  width: 80%;
+  top: -19%;
+  left: 20%;
+  overflow: hidden;
+  position: absolute;
 }
 .hero-button {
   width: 9rem;
   padding: 0.5em 3em;
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   border-radius: 2px;
   cursor: pointer;
   margin-top: 2em;
@@ -42,6 +47,7 @@ element.style {
 
 .text-container {
   color: rgb(255, 255, 255);
+  z-index: 1;
 }
 @media screen and (max-width: 1200px) {
   .hero-continer {

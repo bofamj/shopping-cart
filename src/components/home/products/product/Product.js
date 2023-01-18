@@ -1,20 +1,39 @@
-//import Cart from "../../../cart/cart-comp/Cart";
-import { useEffect } from "react";
 import "./product.css";
 
 const Product = ({ setCart, product, cart }) => {
-  const { id, image, name, price, desc } = product;
-  const addToCart = (id) => {
-    const isEsest = cart.find((item) => item.id === id);
-    if (isEsest) {
-      isEsest.qun++;
-      return setCart(cart, isEsest);
+  const { id, image, name, price, desc, isAdded } = product;
+
+  //* add the product to the cart
+  const addToCart = (product) => {
+    //* aerch if the product has already been added
+    const isExsist = cart.find((item) => item.id === product.id);
+
+    //* if the product has already been added then add for quantity
+    if (isExsist) {
+      console.log(isExsist);
+      setCart(
+        cart.map((item) =>
+          item.id === product.id
+            ? {
+                id: item.id,
+                image: item.image,
+                name: item.name,
+                price: item.price,
+                qun: item.qun + 1,
+              }
+            : {
+                id: item.id,
+                image: item.image,
+                name: item.name,
+                price: item.price,
+                qun: item.qun,
+              }
+        )
+      );
     } else {
-      setCart([...cart, { image, name, price, id, qun: 1 }]);
+      setCart([...cart, { id, image, name, price, desc, qun: 1 }]);
     }
   };
-  useEffect(() => {}, [cart]);
-
   return (
     <div className="container">
       <div className="img-continer">
@@ -27,13 +46,23 @@ const Product = ({ setCart, product, cart }) => {
           <p>
             price <span>{price}$</span>
           </p>
-          <button
-            className="add-button"
-            value={product}
-            onClick={() => addToCart(id)}
-          >
-            Add to cart
-          </button>
+          {!isAdded ? (
+            <button
+              className="add-button "
+              value={product}
+              onClick={() => addToCart(product)}
+            >
+              Add to cart
+            </button>
+          ) : (
+            <button
+              className="add-button desply"
+              value={product}
+              onClick={() => addToCart(id)}
+            >
+              Add to cart
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -41,21 +70,34 @@ const Product = ({ setCart, product, cart }) => {
 };
 
 export default Product;
-/* if (cart.length === 0) {
-      setCart([...cart, { image, name, price, id, qun: 1 }]);
+
+/*const addToCart = (product) => {
+    if (cart.length === 0) {
+      setCart([
+        ...cart,
+        {
+          image,
+          name,
+          price,
+          id,
+          qun: 1,
+          isAdded: true,
+        },
+      ]);
     }
-    console.log(cart);
     if (cart.length > 0) {
-      //console.log(cart);
-      const nweItem = cart.find((item) => {
+      const isEsest = cart.map((item) => {
+        const { image, name, price, id } = item;
         if (item.id === id) {
-          item.qun++;
           console.log(item);
+        } else {
+          setCart([
+            ...cart,
+            { image, name, price, id, qun: 1, isAdded: false },
+          ]);
         }
         return item;
       });
-      setCart([...cart, nweItem]);
-    } else {
-      setCart([...cart, { image, name, price, id, qun: 1 }]);
-      console.log(cart);
-    } */
+      setCart(isEsest);
+    }
+  };*/

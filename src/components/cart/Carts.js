@@ -7,15 +7,22 @@ const Carts = ({ cart, totalPrice, increment, decrement, removeItem }) => {
     <div className="carts-container">
       {/* <h1 className="cart-name">Your cart</h1> */}
       <div className="carts-section">
-        {cart.map((item) => (
-          <Cart
-            key={item.id}
-            item={item}
-            increment={increment}
-            decrement={decrement}
-            removeItem={removeItem}
-          />
-        ))}
+        <h1 className="cart-name">Your cart</h1>
+        {cart.length === 0 ? (
+          <h1 className="add-some-items">
+            You Have No Products Let's Add Some
+          </h1>
+        ) : (
+          cart.map((item) => (
+            <Cart
+              key={item.id}
+              item={item}
+              increment={increment}
+              decrement={decrement}
+              removeItem={removeItem}
+            />
+          ))
+        )}
       </div>
       <div className="amount-section">
         <Amount totalPrice={totalPrice} />

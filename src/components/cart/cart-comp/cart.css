@@ -36,7 +36,8 @@
 }
 .remove-btn {
   border: none;
-  background-color: white;
+  background: none;
+
   cursor: pointer;
   color: rgb(0, 145, 255);
 }

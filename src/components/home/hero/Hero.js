@@ -1,4 +1,4 @@
-import home from "../../.././assets/tamanna-rumee-eD1RNYzzUxc-unsplash.jpg";
+import home from "../../.././assets/—Pngtree—girl in yellow long dress_6464322.png";
 import "./hero.css";
 
 const Hero = () => {

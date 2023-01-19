@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/home/Home";
 import Carts from "./components/cart/Carts";
 import Nave from "./components/home/nave/Nave";
-import { productsData } from "./dummy/data";
+import Ditaile from "./components/home/products/product/product in ditaile/Ditaile";
+import Error from "./components/error/Error";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -85,6 +86,8 @@ function App() {
             />
           }
         />
+        <Route path="/product/:id" element={<Ditaile />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
   );

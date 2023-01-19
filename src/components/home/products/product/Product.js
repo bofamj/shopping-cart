@@ -1,5 +1,5 @@
 import "./product.css";
-
+import { Link } from "react-router-dom";
 const Product = ({ setCart, product, cart, setLodding }) => {
   const { id, image, name, price, desc } = product;
 
@@ -38,13 +38,15 @@ const Product = ({ setCart, product, cart, setLodding }) => {
   };
   return (
     <div className="card">
-      <div className="card-img">
-        {<img src={image} alt="laptop" className="product-img" />}
-      </div>
-      <div className="card-info">
-        <p className="text-title">{name} </p>
-        <p className="text-body">{desc}</p>
-      </div>
+      <Link className="ditile-link" to={`/product/${id}`}>
+        <div className="card-img">
+          {<img src={image} alt="laptop" className="product-img" />}
+        </div>
+        <div className="card-info">
+          <p className="text-title">{name} </p>
+          <p className="text-body">{desc}</p>
+        </div>
+      </Link>
       <div className="card-footer">
         <span className="text-title">${price}</span>
         <button

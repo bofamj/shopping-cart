@@ -35,6 +35,9 @@
   display: none;
 } */
 /**/
+.ditile-link {
+  color: rgb(6, 6, 6);
+}
 .card {
   max-width: 300px;
   margin-top: 5em;

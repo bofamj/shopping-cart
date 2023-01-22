@@ -80,7 +80,26 @@ svg {
   padding-top: 10px;
   border-top: 1px solid #ddd;
 }
-
+.icon-continer {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hart-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.hart-icon-color-red {
+  color: rgb(255, 0, 0);
+}
+.hart-icon-color-with {
+  color: rgb(185, 167, 167);
+}
+.hart-icon:hover {
+  transform: scale(110%);
+}
 /*Text*/
 .text-title {
   font-weight: 900;

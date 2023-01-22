@@ -1,5 +1,5 @@
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./nave.css";
@@ -23,6 +23,7 @@ const Nave = ({ totalQuantity }) => {
             </li>
             <li>
               <Link to="/favorites" className="links">
+                <FontAwesomeIcon icon={faHeart} />
                 Favorits
               </Link>
             </li>

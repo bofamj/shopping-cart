@@ -10,6 +10,7 @@ import Favorites from "./components/favorites/Favorites";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   const [lodding, setLodding] = useState(false);
 
   //*add quntity to a item in the cart
@@ -71,7 +72,13 @@ function App() {
         <Route
           path="/"
           element={
-            <Home cart={cart} setCart={setCart} setLodding={setLodding} />
+            <Home
+              cart={cart}
+              setCart={setCart}
+              setLodding={setLodding}
+              setFavorites={setFavorites}
+              favorites={favorites}
+            />
           }
         />
         <Route
@@ -88,7 +95,10 @@ function App() {
           }
         />
         <Route path="/product/:id" element={<Ditaile />} />
-        <Route path="/favorites" element={<Favorites cart={cart} />} />
+        <Route
+          path="/favorites"
+          element={<Favorites favorites={favorites} />}
+        />
         <Route path="*" element={<Error />} />
       </Routes>
     </>

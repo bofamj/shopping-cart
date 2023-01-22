@@ -1,9 +1,14 @@
+import banner from "../../.././assets/banner-4.jpg";
 import "./hero.css";
+import { heroImg } from "../../../dummy/heroImg";
 
 const Hero = () => {
   return (
     <section className="hero-continer">
-      <div className="iner-container">
+      <div
+        className="iner-container"
+        style={{ backgroundImage: `url(${banner})` }}
+      >
         <div className="text-container">
           <p>SHAYO FASHION PRESENTS</p>
           <h1>

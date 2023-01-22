@@ -22,6 +22,11 @@ const Nave = ({ totalQuantity }) => {
               </Link>
             </li>
             <li>
+              <Link to="/favorites" className="links">
+                Favorits
+              </Link>
+            </li>
+            <li>
               <Link to="/cart" className="links">
                 <div className="cart-icon-container">
                   <p className="icon-nom">{totalQuantity}</p>

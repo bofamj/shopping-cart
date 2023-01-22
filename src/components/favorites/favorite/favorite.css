@@ -1,4 +1,4 @@
-.cart-container {
+.favorite-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,12 +8,12 @@
   border-width: 0 0 2px 0;
   margin-bottom: 1.5em;
 }
-.img-continers {
+.favorite-img-continers {
   width: 6rem;
   border-radius: 3px;
   overflow: hidden;
 }
-.cart-img {
+.favorite-img {
   width: 100%;
 }
 .quatity {
@@ -43,8 +43,8 @@
 }
 @media screen and (max-width: 750px) {
   /* .carts-section {
-    width: 100%;
-  } */
+      width: 100%;
+    } */
   .quantity-price-sec {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,16 @@
+.favorites-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5em 3.2em;
+  color: black;
+}
+.favorites-name {
+  margin-bottom: 2.2em;
+  text-align: center;
+}
+.rite-section {
+  color: black;
+}
+.favorites-section {
+  width: 100%;
+}

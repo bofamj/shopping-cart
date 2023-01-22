@@ -6,6 +6,7 @@ import Carts from "./components/cart/Carts";
 import Nave from "./components/home/nave/Nave";
 import Ditaile from "./components/home/products/product/product in ditaile/Ditaile";
 import Error from "./components/error/Error";
+import Favorites from "./components/favorites/Favorites";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -87,6 +88,7 @@ function App() {
           }
         />
         <Route path="/product/:id" element={<Ditaile />} />
+        <Route path="/favorites" element={<Favorites cart={cart} />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>

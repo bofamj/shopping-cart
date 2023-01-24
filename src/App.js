@@ -12,6 +12,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [lodding, setLodding] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   //*add quntity to a item in the cart
   const increment = (id) => {
@@ -78,6 +79,8 @@ function App() {
               setLodding={setLodding}
               setFavorites={setFavorites}
               favorites={favorites}
+              isActive={isActive}
+              setIsActive={setIsActive}
             />
           }
         />
@@ -97,7 +100,9 @@ function App() {
         <Route path="/product/:id" element={<Ditaile />} />
         <Route
           path="/favorites"
-          element={<Favorites favorites={favorites} />}
+          element={
+            <Favorites favorites={favorites} setFavorites={setFavorites} />
+          }
         />
         <Route path="*" element={<Error />} />
       </Routes>

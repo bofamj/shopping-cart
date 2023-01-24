@@ -1,7 +1,7 @@
 import Favorite from "./favorite/Favorite";
 import "./favorites.css";
 
-const Favorites = ({ favorites }) => {
+const Favorites = ({ favorites, setFavorites }) => {
   return (
     <div className="favorites-container">
       <div className="favorites-section">
@@ -9,7 +9,12 @@ const Favorites = ({ favorites }) => {
       </div>
       <div className="favorites-section">
         {favorites.map((item) => (
-          <Favorite key={item.id} item={item} />
+          <Favorite
+            key={item.id}
+            item={item}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
         ))}
       </div>
     </div>

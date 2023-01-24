@@ -1,7 +1,15 @@
 import Hero from "./hero/Hero";
 import Products from "./products/Products";
 
-const Home = ({ cart, setCart, setLodding, setFavorites, favorites }) => {
+const Home = ({
+  cart,
+  setCart,
+  setLodding,
+  setFavorites,
+  favorites,
+  isActive,
+  setIsActive,
+}) => {
   return (
     <>
       <Hero />
@@ -11,6 +19,8 @@ const Home = ({ cart, setCart, setLodding, setFavorites, favorites }) => {
         setLodding={setLodding}
         setFavorites={setFavorites}
         favorites={favorites}
+        isActive={isActive}
+        setIsActive={setIsActive}
       />
     </>
   );

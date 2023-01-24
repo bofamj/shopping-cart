@@ -1,11 +1,10 @@
-import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
-import { faSquareMinus } from "@fortawesome/free-solid-svg-icons";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import "./favorite.css";
 
-const Favorite = ({ item /* increment, decrement, removeItem */ }) => {
+const Favorite = ({ item, favorites, setFavorites }) => {
+  //*remove item from favorites list
+  const removeItemFomFavorite = () => {
+    setFavorites(favorites.filter((fav) => item.id !== fav.id));
+  };
   /*  console.log(item); */
   return (
     <div className="favorite-container ">
@@ -13,29 +12,17 @@ const Favorite = ({ item /* increment, decrement, removeItem */ }) => {
         <img src={item.image} className="favorite-img" alt="cart img" />
       </div>
 
-      <div className="name">
+      <div className="favorite-name">
         <h2>{item.name}</h2>
         <p>{item.price}$</p>
+      </div>
+      <div className="favorite-quantity-price-sec">
         <button
-          className="remove-btn" /* onClick={() => removeItem(item.id)} */
+          className="favorite-remove-btn"
+          onClick={() => removeItemFomFavorite(item.id)}
         >
           Remove
         </button>
-      </div>
-      <div className="quantity-price-sec">
-        <div className="quatity">
-          <FontAwesomeIcon
-            icon={faSquarePlus}
-            className="quantity-btn"
-            /* onClick={() => increment(item.id)} */
-          />
-          <p value={item.qun}>{item.qun}</p>
-          <FontAwesomeIcon
-            icon={faSquareMinus}
-            className="quantity-btn"
-            /* onClick={() => decrement(item.id)} */
-          />
-        </div>
       </div>
     </div>
   );

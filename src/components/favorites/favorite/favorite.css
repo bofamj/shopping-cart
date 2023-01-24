@@ -16,7 +16,7 @@
 .favorite-img {
   width: 100%;
 }
-.quatity {
+.favorite-quatity {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,13 +28,13 @@
 .quantity-btn:hover {
   scale: 0.9;
 }
-.name {
+.favorite-name {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.remove-btn {
+.favorite-remove-btn {
   border: none;
   background: none;
 

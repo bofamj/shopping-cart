@@ -2,7 +2,15 @@ import "./products.css";
 import Product from "./product/Product";
 import { productsData } from "../../../dummy/data";
 
-const Products = ({ setCart, cart, setLodding, setFavorites, favorites }) => {
+const Products = ({
+  setCart,
+  cart,
+  setLodding,
+  setFavorites,
+  favorites,
+  setIsActive,
+  isActive,
+}) => {
   return (
     <section className="products-container">
       {productsData.map((product) => (
@@ -14,6 +22,8 @@ const Products = ({ setCart, cart, setLodding, setFavorites, favorites }) => {
           setLodding={setLodding}
           setFavorites={setFavorites}
           favorites={favorites}
+          setIsActive={setIsActive}
+          isActive={isActive}
         />
       ))}
     </section>

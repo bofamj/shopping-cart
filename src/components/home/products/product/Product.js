@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -8,26 +8,29 @@ import "./product.css";
 const Product = ({ product }) => {
   //*distracher the product
   const { id, image, name, price, desc } = product;
-  // const [isActive, setIsActive] = useState(false);
-  const {
-    cart,
-    setCart,
-    favorites,
-    setFavorites,
-    isActive,
-    setIsActive,
-    setLodding,
-  } = useContext(DataContext);
+  console.log(id);
+  const [isActive, setIsActive] = useState(false);
+  const { cart, setCart, favorites, setFavorites, setLodding } =
+    useContext(DataContext);
   //*change color
-  const addToFavorites = () => {
-    setIsActive(!isActive);
-    console.log(product.id);
+  useEffect(() => {
+    const isInFavorites = favorites.find((f) => f.id === product.id);
+    if (isInFavorites) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  }, [product, favorites]);
+  //*add product to favorites
+  const addToFavorites = (id) => {
     const isExsisted = favorites.find((f) => f.id === product.id);
     if (isExsisted) {
+      //setIsActive(false);
       setFavorites(
         favorites.filter((item) => (product.id !== item.id ? item : ""))
       );
     } else {
+      //setIsActive(true);
       setFavorites((prev) => [...prev, product]);
     }
   };
@@ -85,7 +88,7 @@ const Product = ({ product }) => {
                 ? "hart-icon hart-icon-color-red"
                 : "hart-icon hart-icon-color-with"
             }
-            onClick={addToFavorites}
+            onClick={() => addToFavorites(id)}
           />
           <button
             className="card-button"

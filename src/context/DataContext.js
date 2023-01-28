@@ -5,7 +5,7 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const [isActive, setIsActive] = useState(false);
+  //const [isActive, setIsActive] = useState(false);
   const [lodding, setLodding] = useState(false);
   //!add quntity to a item in the cart
   const increment = (id) => {
@@ -64,8 +64,6 @@ export const DataProvider = ({ children }) => {
         setCart,
         favorites,
         setFavorites,
-        isActive,
-        setIsActive,
         lodding,
         setLodding,
         increment,

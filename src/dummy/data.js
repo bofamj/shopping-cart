@@ -9,7 +9,8 @@ export const productsData = [
     image: iphon,
     qun: 5,
     isAdded: false,
-    isVaforits: false,
+    category: "Electronics",
+    subCategory: "Phones",
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ export const productsData = [
     image: iphon,
     qun: 3,
     isAdded: false,
-    isVaforits: false,
+    category: "Electronics",
+    subCategory: "Phones",
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ export const productsData = [
     image: laptop,
     qun: 2,
     isAdded: false,
-    isVaforits: false,
+    category: "Electronics",
+    subCategory: "computers",
   },
   {
     id: 4,
@@ -39,6 +42,9 @@ export const productsData = [
     image: iphon,
     qun: 1,
     isAdded: false,
-    isVaforits: false,
+    category: " Electronics",
+    subCategory: "Phones",
   },
 ];
+export const categorys = ["All", "Electronics", "clothing"];
+export const subCategory = ["All", "phones", "computer"];

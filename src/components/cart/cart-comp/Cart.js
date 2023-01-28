@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import DataContext from "../../../context/DataContext";
 import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 import { faSquareMinus } from "@fortawesome/free-solid-svg-icons";
 
@@ -5,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./cart.css";
 
-const Cart = ({ item, increment, decrement, removeItem }) => {
-  /*  console.log(item); */
+const Cart = ({ item }) => {
+  const { increment, decrement, removeItem } = useContext(DataContext);
   return (
     <div className="cart-container ">
       <div className="img-continers">

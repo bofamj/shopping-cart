@@ -1,21 +1,23 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import DataContext from "../../../.././context/DataContext";
 import "./product.css";
 
-const Product = ({
-  setCart,
-  product,
-  cart,
-  setLodding,
-  setFavorites,
-  favorites,
-}) => {
+const Product = ({ product }) => {
   //*distracher the product
   const { id, image, name, price, desc } = product;
-  const [isActive, setIsActive] = useState(false);
-
+  // const [isActive, setIsActive] = useState(false);
+  const {
+    cart,
+    setCart,
+    favorites,
+    setFavorites,
+    isActive,
+    setIsActive,
+    setLodding,
+  } = useContext(DataContext);
   //*change color
   const addToFavorites = () => {
     setIsActive(!isActive);

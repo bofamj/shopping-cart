@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import DataContext from "../../.././context/DataContext";
 import "./favorite.css";
 
-const Favorite = ({ item, favorites, setFavorites }) => {
+const Favorite = ({ item }) => {
+  const { favorites, setFavorites } = useContext(DataContext);
   //*remove item from favorites list
   const removeItemFomFavorite = () => {
     setFavorites(favorites.filter((fav) => item.id !== fav.id));

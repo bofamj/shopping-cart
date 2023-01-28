@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import DataContext from "../../../context/DataContext";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,7 +7,8 @@ import { Link } from "react-router-dom";
 import "./nave.css";
 import logo from "../../.././assets/—Pngtree—shopping logo deisgn modern style_8549828.png";
 
-const Nave = ({ totalQuantity }) => {
+const Nave = () => {
+  const { totalQuantity } = useContext(DataContext);
   return (
     <nav className="nav ">
       <div className="nav-wrapper">

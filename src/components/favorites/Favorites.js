@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import DataContext from "../.././context/DataContext";
 import Favorite from "./favorite/Favorite";
 import "./favorites.css";
 
-const Favorites = ({ favorites, setFavorites }) => {
+const Favorites = () => {
+  const { favorites } = useContext(DataContext);
   return (
     <div className="favorites-container">
       <div className="favorites-section">
@@ -9,12 +12,7 @@ const Favorites = ({ favorites, setFavorites }) => {
       </div>
       <div className="favorites-section">
         {favorites.map((item) => (
-          <Favorite
-            key={item.id}
-            item={item}
-            favorites={favorites}
-            setFavorites={setFavorites}
-          />
+          <Favorite key={item.id} item={item} />
         ))}
       </div>
     </div>

@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import DataContext from "../../../context/DataContext";
+
 import "./amount.css";
 
-const Amount = ({ totalPrice }) => {
+const Amount = () => {
   const [text, setText] = useState(1.72 / 100);
+  const { totalPrice } = useContext(DataContext);
   return (
     <div className="div">
       <div className="amount-sec soubtotal">

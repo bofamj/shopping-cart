@@ -1,17 +1,12 @@
+import { useContext } from "react";
+import DataContext from "../.././context/DataContext";
 import "./carts.css";
 import Cart from "./cart-comp/Cart";
 import Amount from "./amounts/Amount";
-
 import Lodding from "../lodding/Lodding";
 
-const Carts = ({
-  cart,
-  totalPrice,
-  increment,
-  decrement,
-  removeItem,
-  lodding,
-}) => {
+const Carts = () => {
+  const { cart, lodding } = useContext(DataContext);
   return (
     <>
       {lodding ? (
@@ -25,19 +20,11 @@ const Carts = ({
                 You Have No Products Let's Add Some
               </h1>
             ) : (
-              cart.map((item) => (
-                <Cart
-                  key={item.id}
-                  item={item}
-                  increment={increment}
-                  decrement={decrement}
-                  removeItem={removeItem}
-                />
-              ))
+              cart.map((item) => <Cart key={item.id} item={item} />)
             )}
           </div>
           <div className="amount-section">
-            <Amount totalPrice={totalPrice} />
+            <Amount />
           </div>
         </div>
       )}

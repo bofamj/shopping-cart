@@ -31,7 +31,7 @@ export const productsData = [
     image: laptop,
     qun: 2,
     isAdded: false,
-    category: "Electronics",
+    category: "clothing",
     subCategory: "computers",
   },
   {
@@ -42,7 +42,7 @@ export const productsData = [
     image: iphon,
     qun: 1,
     isAdded: false,
-    category: " Electronics",
+    category: "clothing",
     subCategory: "Phones",
   },
 ];

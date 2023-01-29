@@ -8,7 +8,6 @@ import "./product.css";
 const Product = ({ product }) => {
   //*distracher the product
   const { id, image, name, price, desc } = product;
-  console.log(id);
   const [isActive, setIsActive] = useState(false);
   const { cart, setCart, favorites, setFavorites, setLodding } =
     useContext(DataContext);

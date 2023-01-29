@@ -1,8 +1,10 @@
 import { createContext, useState } from "react";
+import { productsData } from "../dummy/data";
 
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
+  const [products, setProducts] = useState(productsData);
   const [cart, setCart] = useState([]);
   const [favorites, setFavorites] = useState([]);
   //const [isActive, setIsActive] = useState(false);
@@ -71,6 +73,8 @@ export const DataProvider = ({ children }) => {
         removeItem,
         totalPrice,
         totalQuantity,
+        products,
+        setProducts,
       }}
     >
       {children}

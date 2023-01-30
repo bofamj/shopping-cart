@@ -3,50 +3,113 @@ import laptop from "../assets/laptops.jpg";
 export const productsData = [
   {
     id: 1,
-    name: "iPhone 7",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
-    price: 100.99,
-    image: iphon,
+    brandName: "iPhone 7",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 800,
+        text: "$800.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: iphon,
     qun: 5,
     isAdded: false,
-    category: "Electronics",
+    productType: "Electronics",
     subCategory: "Phones",
   },
   {
     id: 2,
-    name: "iPhone X",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
-    price: 1000.99,
-    image: iphon,
+    brandName: "iPhone X",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 900,
+        text: "$900.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: iphon,
     qun: 3,
-    isAdded: false,
-    category: "Electronics",
+    faproductType: "Electronics",
     subCategory: "Phones",
   },
   {
     id: 3,
-    name: "laptop",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
-    price: 1520.99,
-    image: laptop,
+    brandName: "laptop",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 1500,
+        text: "$1500.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: laptop,
     qun: 2,
     isAdded: false,
-    category: "clothing",
+    productType: "clothing",
     subCategory: "computers",
   },
   {
     id: 4,
-    name: "iPhone 5",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
-    price: 300.99,
-    image: iphon,
+    brandName: "iPhone 5",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 300,
+        text: "$300.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: iphon,
     qun: 1,
     isAdded: false,
-    category: "clothing",
+    productType: "clothing",
     subCategory: "Phones",
   },
 ];
-export const categorys = ["All", "Electronics", "clothing"];
+export const categorys = ["All", "Electronics", "Product"];
 export const subCategory = ["All", "phones", "computers"];
 export const allProductsData = [
   {
@@ -1584,5 +1647,112 @@ export const allProductsData = [
     url: "ted-baker/ted-baker-mitack-brogues-in-tan-leather/prd/12688925?clr=tan&colourWayId=16440202",
     imageUrl:
       "images.asos-media.com/products/ted-baker-mitack-brogues-in-tan-leather/12688925-1-tan",
+  },
+  {
+    id: 1,
+    brandName: "iPhone 7",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 800,
+        text: "$800.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: iphon,
+    qun: 5,
+    isAdded: false,
+    productType: "Electronics",
+    subCategory: "Phones",
+  },
+  {
+    id: 2,
+    brandName: "iPhone X",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 900,
+        text: "$900.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: iphon,
+    qun: 3,
+    faproductType: "Electronics",
+    subCategory: "Phones",
+  },
+  {
+    id: 3,
+    brandName: "laptop",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 1500,
+        text: "$1500.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: laptop,
+    qun: 2,
+    isAdded: false,
+    productType: "Electronics",
+    subCategory: "computers",
+  },
+  {
+    id: 4,
+    brandName: "iPhone 5",
+    name: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil",
+    price: {
+      current: {
+        value: 300,
+        text: "$300.00",
+      },
+      previous: {
+        value: null,
+        text: "",
+      },
+      rrp: {
+        value: null,
+        text: "",
+      },
+      isMarkedDown: false,
+      isOutletPrice: false,
+      currency: "USD",
+    },
+    imageUrl: iphon,
+    qun: 1,
+    isAdded: false,
+    productType: "Electronics",
+    subCategory: "Phones",
   },
 ];

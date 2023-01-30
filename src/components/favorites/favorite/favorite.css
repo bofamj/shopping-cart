@@ -7,6 +7,8 @@
   border: 0.1rem solid rgb(179, 179, 179);
   border-width: 0 0 2px 0;
   margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  overflow: hidden;
 }
 .favorite-img-continers {
   width: 6rem;

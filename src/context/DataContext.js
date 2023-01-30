@@ -79,6 +79,7 @@ export const DataProvider = ({ children }) => {
         products,
         setProducts,
         allProducts,
+        setAllProducts,
       }}
     >
       {children}

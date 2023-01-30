@@ -16,6 +16,20 @@ const Filter = () => {
         (product) => product.category === e.target.value
       );
       setProducts(filtered);
+      console.log(products);
+    } else {
+      setProducts(productsData);
+    }
+  };
+  //*filter by sub category
+  const getSubCatagory = (e) => {
+    subSetCategores(e.target.value);
+    if (e.target.value !== "All") {
+      const filtered = products.filter(
+        (product) => product.subCategory === e.target.value
+      );
+      setProducts(filtered);
+      console.log(products);
     } else {
       setProducts(productsData);
     }
@@ -30,7 +44,7 @@ const Filter = () => {
           })}
         </select>
       </form>
-      <form className="form" onChange={(e) => subSetCategores(e.target.value)}>
+      <form className="form" onChange={(e) => getSubCatagory(e)}>
         <label for="cars">Filter by a subcategory:</label>
         <select name="cars" id="cars">
           {subCategory.map((subCategory) => {

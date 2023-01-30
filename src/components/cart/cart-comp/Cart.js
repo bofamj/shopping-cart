@@ -12,11 +12,15 @@ const Cart = ({ item }) => {
   return (
     <div className="cart-container ">
       <div className="img-continers">
-        <img src={item.image} className="cart-img" alt="cart img" />
+        <img
+          src={`https://${item.imageUrl}`}
+          className="cart-img"
+          alt="cart img"
+        />
       </div>
 
       <div className="name">
-        <h2>{item.name}</h2>
+        <h2>{item.brandName}</h2>
         <p>{item.price}$</p>
         <button className="remove-btn" onClick={() => removeItem(item.id)}>
           Remove

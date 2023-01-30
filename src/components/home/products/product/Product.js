@@ -7,7 +7,8 @@ import "./product.css";
 
 const Product = ({ product }) => {
   //*distracher the product
-  const { id, image, name, price, desc } = product;
+  //const { id, image, name, price, desc } = product;
+  const { id, imageUrl, brandName, price, name } = product;
   const [isActive, setIsActive] = useState(false);
   const { cart, setCart, favorites, setFavorites, setLodding } =
     useContext(DataContext);
@@ -31,6 +32,7 @@ const Product = ({ product }) => {
     } else {
       //setIsActive(true);
       setFavorites((prev) => [...prev, product]);
+      console.log(product);
     }
   };
 
@@ -47,22 +49,35 @@ const Product = ({ product }) => {
           item.id === product.id
             ? {
                 id: item.id,
-                image: item.image,
-                name: item.name,
-                price: item.price,
+                imageUrl: item.imageUrl,
+                name: item.brandName,
+                price: item.price.current.text,
+                value: item.price.current.value,
                 qun: item.qun + 1,
               }
             : {
                 id: item.id,
-                image: item.image,
-                name: item.name,
-                price: item.price,
+                imageUrl: item.imageUrl,
+                brandName: item.brandName,
+                price: item.price.current.text,
+                value: item.price.current.value,
                 qun: item.qun,
               }
         )
       );
     } else {
-      setCart([...cart, { id, image, name, price, desc, qun: 1 }]);
+      setCart([
+        ...cart,
+        {
+          id,
+          imageUrl,
+          brandName,
+          price: price.current.text,
+          value: price.current.value,
+          name,
+          qun: 1,
+        } /* { id, imageUrl, name, price, brandName, qun: 1 } */,
+      ]);
     }
     setLodding(false);
   };
@@ -70,15 +85,19 @@ const Product = ({ product }) => {
     <div className="card">
       <Link className="ditile-link" to={`/product/${id}`}>
         <div className="card-img">
-          {<img src={image} alt="laptop" className="product-img" />}
+          <img
+            src={`https://${imageUrl}`}
+            alt="laptop"
+            className="product-img"
+          />
         </div>
         <div className="card-info">
-          <p className="text-title">{name} </p>
-          <p className="text-body">{desc}</p>
+          <p className="text-title">{brandName} </p>
+          <p className="text-body">{name}</p>
         </div>
       </Link>
       <div className="card-footer">
-        <span className="text-title">${price}</span>
+        <span className="text-title">{price.current.text}</span>
         <div className="icon-continer">
           <FontAwesomeIcon
             icon={faHeart}

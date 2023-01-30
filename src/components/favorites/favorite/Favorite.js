@@ -12,12 +12,16 @@ const Favorite = ({ item }) => {
   return (
     <div className="favorite-container ">
       <div className="favorite-img-continers">
-        <img src={item.image} className="favorite-img" alt="cart img" />
+        <img
+          src={`https://${item.imageUrl}`}
+          className="favorite-img"
+          alt="cart img"
+        />
       </div>
 
       <div className="favorite-name">
-        <h2>{item.name}</h2>
-        <p>{item.price}$</p>
+        <h2>{item.brandName}</h2>
+        <p>{item.price.current.text}$</p>
       </div>
       <div className="favorite-quantity-price-sec">
         <button

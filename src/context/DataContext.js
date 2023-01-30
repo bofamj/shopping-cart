@@ -1,14 +1,16 @@
 import { createContext, useState } from "react";
-import { productsData } from "../dummy/data";
+import { productsData, allProductsData } from "../dummy/data";
 
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
   const [products, setProducts] = useState(productsData);
+  const [allProducts, setAllProducts] = useState(allProductsData);
   const [cart, setCart] = useState([]);
   const [favorites, setFavorites] = useState([]);
   //const [isActive, setIsActive] = useState(false);
   const [lodding, setLodding] = useState(false);
+  console.log(allProducts);
   //!add quntity to a item in the cart
   const increment = (id) => {
     const newItem = cart.map((item) => {
@@ -48,10 +50,11 @@ export const DataProvider = ({ children }) => {
 
   let { totalPrice, totalQuantity } = cart.reduce(
     (acc, item) => {
-      const { qun, price } = item;
+      const { qun, value } = item;
+      console.log(value);
       //total quantity
       acc.totalQuantity += qun;
-      acc.totalPrice += qun * price;
+      acc.totalPrice += qun * value;
       return acc;
     },
     {
@@ -75,6 +78,7 @@ export const DataProvider = ({ children }) => {
         totalQuantity,
         products,
         setProducts,
+        allProducts,
       }}
     >
       {children}

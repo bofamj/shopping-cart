@@ -1755,4 +1755,50 @@ export const allProductsData = [
     productType: "Electronics",
     subCategory: "Phones",
   },
+  {
+    brandName: "Dior",
+    price: {
+      current: {
+        value: 300,
+        text: "$300.00",
+      },
+      name: "Lip Glow Oil",
+      imageUrl: "www.sephora.com/productimages/sku/s2449130-main-grid.jpg",
+      image135:
+        "https://www.sephora.com/productimages/sku/s2449130-main-grid.jpg",
+      image250:
+        "https://www.sephora.com/productimages/sku/s2449130-main-hero.jpg",
+      image450:
+        "https://www.sephora.com/productimages/sku/s2449130-main-Lhero.jpg",
+      moreColors: 7,
+      id: "P453814",
+      rating: "4.1202",
+      reviews: "990",
+      targetUrl: "/product/dior-lip-glow-oil-P453814",
+    },
+  },
+  {
+    brandName: "Drunk Elephant",
+    currentSku: [Object],
+    price: {
+      current: {
+        value: 300,
+        text: "$300.00",
+      },
+      name: "D-Bronzi™ Anti-Pollution Bronzing Drops with Peptides",
+      imageUrll:
+        "www.sephora.com/productimages/sku/s2404721-main-grid.jpg?pb=2020-03-sephora-clean-2019",
+      heroImageAltText: "Clean at Sephora",
+      imageUrl:
+        "www.sephora.com/productimages/sku/s2404721-main-grid.jpg?pb=2020-03-sephora-clean-2019",
+      image250:
+        "https://www.sephora.com/productimages/sku/s2404721-main-hero.jpg?pb=2020-03-sephora-clean-2019",
+      image450:
+        "https://www.sephora.com/productimages/sku/s2404721-main-Lhero.jpg?pb=2020-03-sephora-clean-2019",
+      id: "P432668",
+      rating: "4.4807",
+      reviews: "1914",
+      targetUrl: "/product/d-bronzi-tm-anti-pollution-sunshine-serum-P432668",
+    },
+  },
 ];

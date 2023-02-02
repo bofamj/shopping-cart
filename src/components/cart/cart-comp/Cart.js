@@ -8,7 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./cart.css";
 
 const Cart = ({ item }) => {
-  const { increment, decrement, removeItem } = useContext(DataContext);
+  const { increment, decrement, removeItem, fetchProducts } =
+    useContext(DataContext);
+  console.log(fetchProducts);
   return (
     <div className="cart-container ">
       <div className="img-continers">

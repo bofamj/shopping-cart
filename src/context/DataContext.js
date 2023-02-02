@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import axios from "axios";
 import { productsData, allProductsData } from "../dummy/data";
 
 const DataContext = createContext({});
@@ -10,7 +11,7 @@ export const DataProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
   //const [isActive, setIsActive] = useState(false);
   const [lodding, setLodding] = useState(false);
-  console.log(allProducts);
+
   //!add quntity to a item in the cart
   const increment = (id) => {
     const newItem = cart.map((item) => {

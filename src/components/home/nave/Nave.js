@@ -25,6 +25,11 @@ const Nave = () => {
               </Link>
             </li>
             <li>
+              <Link to="/BeautyProduct" className="links">
+                BeautyProduct
+              </Link>
+            </li>
+            <li>
               <Link to="/favorites" className="links">
                 <FontAwesomeIcon icon={faHeart} />
                 Favorits

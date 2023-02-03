@@ -14,7 +14,7 @@ const useFetch = (url, RapidAPIHost) => {
       },
     });
     const data = await response.json();
-    setFetchProducts(data);
+    setFetchProducts(data.products);
     setLodding(false);
   };
   useEffect(() => {

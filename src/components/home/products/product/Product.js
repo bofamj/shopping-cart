@@ -31,7 +31,14 @@ const Product = ({ product }) => {
       );
     } else {
       //setIsActive(true);
-      setFavorites((prev) => [...prev, product]);
+      setFavorites((prev) => [
+        ...prev,
+        {
+          imageUrl: `https://${imageUrl}`,
+          brandName: brandName,
+          id: product.id,
+        },
+      ]);
     }
   };
 

@@ -5,15 +5,14 @@ import { Link } from "react-router-dom";
 import DataContext from "../../../context/DataContext";
 import "./handm.css";
 
-const Handm = ({ product }) => {
-  console.log(product);
+const BeautyProduct = ({ product }) => {
   const { cart, setCart, favorites, setFavorites, setLodding } =
     useContext(DataContext);
   const [isActive, setIsActive] = useState(false);
   //*distracher the product
   const { brandName, currentSku, heroImage, displayName, productId } = product;
   useEffect(() => {
-    const isInFavorites = favorites.find((f) => f.id === product.id);
+    const isInFavorites = favorites.find((f) => f.id === productId);
     if (isInFavorites) {
       setIsActive(true);
     } else {
@@ -32,7 +31,10 @@ const Handm = ({ product }) => {
       );
     } else {
       //setIsActive(true);
-      setFavorites((prev) => [...prev, product]);
+      setFavorites((prev) => [
+        ...prev,
+        { imageUrl: heroImage, brandName: brandName, id: productId },
+      ]);
     }
   };
   return (
@@ -71,5 +73,5 @@ const Handm = ({ product }) => {
   );
 };
 
-export default Handm;
+export default BeautyProduct;
 /**/

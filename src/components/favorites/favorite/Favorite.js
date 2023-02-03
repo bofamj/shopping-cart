@@ -8,20 +8,16 @@ const Favorite = ({ item }) => {
   const removeItemFomFavorite = () => {
     setFavorites(favorites.filter((fav) => item.id !== fav.id));
   };
-  /*  console.log(item); */
+  /* console.log(item); */
   return (
     <div className="favorite-container ">
       <div className="favorite-img-continers">
-        <img
-          src={`https://${item.imageUrl}`}
-          className="favorite-img"
-          alt="cart img"
-        />
+        <img src={item.imageUrl} className="favorite-img" alt="cart img" />
       </div>
 
       <div className="favorite-name">
         <h2>{item.brandName}</h2>
-        <p>{item.price.current.text}$</p>
+        {/* <p>{item.price.current.text}$</p> */}
       </div>
       <div className="favorite-quantity-price-sec">
         <button

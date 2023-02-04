@@ -8,6 +8,7 @@ import Error from "./components/error/Error";
 import Favorites from "./components/favorites/Favorites";
 import { DataProvider } from "./context/DataContext";
 import BeautyProducts from "./components/h_and_m/BeautyProducts";
+import Men from "./components/men/Men";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/product/:id" element={<Ditaile />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/BeautyProduct" element={<BeautyProducts />} />
+        <Route path="/men" element={<Men />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </DataProvider>

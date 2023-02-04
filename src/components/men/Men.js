@@ -1,19 +1,20 @@
 import { useContext } from "react";
 import { motion } from "framer-motion";
-import "./handM.css";
-import BeautyProduct from "./h_and-m/BeautyProduct";
+import "./men.css";
+import BeautyProduct from "./man/Man";
 import useFetch from "../../useFetch";
 import DataContext from "../../context/DataContext";
 import Lodding from "../lodding/Lodding";
 
-const BeautyProducts = () => {
+const Men = () => {
   const { lodding } = useContext(DataContext);
   const url =
-    "https://sephora.p.rapidapi.com/products/list?categoryId=cat130044&pageSize=60&currentPage=1";
-  const RapidAPIHost = "sephora.p.rapidapi.com";
+    "https://unofficial-shein.p.rapidapi.com/products/list?cat_id=1980&adp=10170797&language=en&country=US&currency=USD&sort=7&limit=20&page=1";
+  const RapidAPIHost = "unofficial-shein.p.rapidapi.com";
   const params = "";
-  const fetchProductss = useFetch(url, params, RapidAPIHost);
-  const { fetchProducts } = fetchProductss;
+  const fetchProducts = useFetch(url, params, RapidAPIHost);
+  const { fetchAllProducts } = fetchProducts;
+  console.log(fetchAllProducts);
 
   if (lodding) {
     return <Lodding />;
@@ -31,7 +32,9 @@ const BeautyProducts = () => {
           {lodding ? (
             <Lodding />
           ) : (
-            fetchProducts.map((product) => <BeautyProduct product={product} />)
+            fetchAllProducts.map((product) => (
+              <BeautyProduct product={product} />
+            ))
           )}
         </motion.section>
       </div>
@@ -39,5 +42,5 @@ const BeautyProducts = () => {
   }
 };
 
-export default BeautyProducts;
+export default Men;
 /*  */

@@ -1,0 +1,21 @@
+.ditile-continer {
+  width: 100%;
+  padding: 6.65em 16em;
+  color: black;
+}
+.ditaile-img-continer {
+  width: 25%;
+  overflow: hidden;
+}
+.ditaile-img-continer img {
+  width: 100%;
+}
+.ditile-dic-continer {
+  padding: 0.65em 7em 0.65em 0;
+}
+.prics-and-riting {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -7,6 +7,7 @@ import DataContext from "../../../context/DataContext";
 
 const Products = () => {
   const { products, allProducts } = useContext(DataContext);
+
   return (
     <div className="products-wraper">
       <Filter />

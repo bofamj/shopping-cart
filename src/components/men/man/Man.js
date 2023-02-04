@@ -6,13 +6,14 @@ import DataContext from "../../../context/DataContext";
 import "./man.css";
 
 const BeautyProduct = ({ product }) => {
+  console.log(product);
   const { cart, setCart, favorites, setFavorites, setLodding } =
     useContext(DataContext);
   const [isActive, setIsActive] = useState(false);
   //*distracher the product
-  const { brandName, currentSku, heroImage, displayName, productId } = product;
+  const { brand_badge, salePrice, goods_img, goods_name, goods_id } = product;
   useEffect(() => {
-    const isInFavorites = favorites.find((f) => f.id === productId);
+    const isInFavorites = favorites.find((f) => f.id === goods_id);
     if (isInFavorites) {
       setIsActive(true);
     } else {
@@ -20,36 +21,36 @@ const BeautyProduct = ({ product }) => {
     }
   }, [product, favorites]);
   //*add product to favorites
-  const addToFavorites = (productId) => {
-    const isExsisted = favorites.find((f) => f.productId === product.productId);
+  const addToFavorites = (goods_id) => {
+    const isExsisted = favorites.find((f) => f.productId === product.goods_id);
     if (isExsisted) {
       //setIsActive(false);
       setFavorites(
         favorites.filter((item) =>
-          product.productId !== item.productId ? item : ""
+          product.goods_id !== item.productId ? item : ""
         )
       );
     } else {
       //setIsActive(true);
       setFavorites((prev) => [
         ...prev,
-        { imageUrl: heroImage, brandName: brandName, id: productId },
+        { imageUrl: goods_img, brandName: brand_badge, id: goods_id },
       ]);
     }
   };
   return (
     <div className="card">
-      {/*  <Link className="ditile-link" to={`/product/`}>
+      <Link className="ditile-link" to={`/product/`}>
         <div className="card-img">
-          <img src={heroImage} alt="laptop" className="product-img" />
+          <img src={goods_img} alt="laptop" className="product-img" />
         </div>
         <div className="card-info">
-          <p className="text-title">{brandName} </p>
-          <p className="text-body">{displayName}</p>
+          <p className="text-title">{brand_badge} </p>
+          <p className="text-body">{goods_name}</p>
         </div>
       </Link>
       <div className="card-footer">
-        <span className="text-title">{currentSku.listPrice}</span>
+        <span className="text-title">{salePrice.amountWithSymbol}</span>
         <div className="icon-continer">
           <FontAwesomeIcon
             icon={faHeart}
@@ -58,7 +59,7 @@ const BeautyProduct = ({ product }) => {
                 ? "hart-icon hart-icon-color-red"
                 : "hart-icon hart-icon-color-with"
             }
-            onClick={() => addToFavorites(productId)}
+            onClick={() => addToFavorites(goods_id)}
           />
           <button className="card-button" value={product}>
             <svg className="svg-icon" viewBox="0 0 20 20">
@@ -68,7 +69,7 @@ const BeautyProduct = ({ product }) => {
             </svg>
           </button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -22,6 +22,7 @@ const useFetch = (url, params, RapidAPIHost) => {
   };
   useEffect(() => {
     getData();
+    console.log(fetchProducts);
     // <-- pass controller
   }, [url, RapidAPIHost]);
   return { fetchProducts, fetchAllProducts };

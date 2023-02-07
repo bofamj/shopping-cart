@@ -30,6 +30,11 @@ const Nave = () => {
               </Link>
             </li>
             <li>
+              <Link to="/men" className="links">
+                Men
+              </Link>
+            </li>
+            <li>
               <Link to="/favorites" className="links">
                 <FontAwesomeIcon icon={faHeart} />
                 Favorits

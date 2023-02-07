@@ -6,7 +6,6 @@ import DataContext from "../../../context/DataContext";
 import "./man.css";
 
 const BeautyProduct = ({ product }) => {
-  console.log(product);
   const { cart, setCart, favorites, setFavorites, setLodding } =
     useContext(DataContext);
   const [isActive, setIsActive] = useState(false);

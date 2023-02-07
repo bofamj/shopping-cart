@@ -2,6 +2,7 @@ import { useContext } from "react";
 import DataContext from "../../../context/DataContext";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./nave.css";
@@ -24,16 +25,23 @@ const Nave = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/BeautyProduct" className="links">
-                BeautyProduct
-              </Link>
-            </li>
-            <li>
-              <Link to="/men" className="links">
-                Men
-              </Link>
-            </li>
+            <div className="dropdown">
+              <button className="dropbtn">
+                Products
+                <FontAwesomeIcon icon={faCaretDown} />
+              </button>
+              <div className="dropdown-content">
+                <Link to="/men" className="links drop-link">
+                  Men
+                </Link>
+                <Link to="/woman" className="links drop-link">
+                  Woman
+                </Link>
+                <Link to="/cheldrins" className="links drop-link">
+                  Cheldrins
+                </Link>
+              </div>
+            </div>
             <li>
               <Link to="/favorites" className="links">
                 <FontAwesomeIcon icon={faHeart} />

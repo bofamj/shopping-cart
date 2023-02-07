@@ -23,7 +23,7 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/BeautyProduct" element={<BeautyProducts />} />
         <Route path="/men" element={<Man />} />
-        <Route path="/women" element={<Women />} />
+        <Route path="/woman" element={<Women />} />
         <Route path="/cheldrins" element={<Cheldrins />} />
         <Route path="*" element={<Error />} />
       </Routes>

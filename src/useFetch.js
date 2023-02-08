@@ -16,13 +16,13 @@ const useFetch = (url, params, RapidAPIHost) => {
       },
     });
     const data = await response.json();
-    setFetchProducts(data.products);
     setFetchAllProducts(data.info.products);
+    setFetchProducts(data.products);
+
     setLodding(false);
   };
   useEffect(() => {
     getData();
-    console.log(fetchProducts);
     // <-- pass controller
   }, [url, RapidAPIHost]);
   return { fetchProducts, fetchAllProducts };

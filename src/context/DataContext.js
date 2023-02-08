@@ -7,6 +7,7 @@ const DataContext = createContext({});
 export const DataProvider = ({ children }) => {
   const [products, setProducts] = useState(productsData);
   const [allProducts, setAllProducts] = useState(allProductsData);
+  const [detaldProduct, setDetaldProduct] = useState();
   const [cart, setCart] = useState([]);
   const [favorites, setFavorites] = useState([]);
   //const [isActive, setIsActive] = useState(false);
@@ -81,6 +82,8 @@ export const DataProvider = ({ children }) => {
         setProducts,
         allProducts,
         setAllProducts,
+        detaldProduct,
+        setDetaldProduct,
       }}
     >
       {children}

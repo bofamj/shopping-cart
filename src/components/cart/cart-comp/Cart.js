@@ -14,11 +14,7 @@ const Cart = ({ item }) => {
   return (
     <div className="cart-container ">
       <div className="img-continers">
-        <img
-          src={`https://${item.imageUrl}`}
-          className="cart-img"
-          alt="cart img"
-        />
+        <img src={item.imageUrl} className="cart-img" alt="cart img" />
       </div>
 
       <div className="name">

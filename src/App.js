@@ -11,6 +11,7 @@ import BeautyProducts from "./components/h_and_m/BeautyProducts";
 import Cheldrins from "./pages/Cheldrins";
 import Man from "./pages/Man";
 import Women from "./pages/Women";
+import WomenLingerie from "./pages/WomenLingerie";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/BeautyProduct" element={<BeautyProducts />} />
         <Route path="/men" element={<Man />} />
         <Route path="/woman" element={<Women />} />
+        <Route path="/lingerie" element={<WomenLingerie />} />
         <Route path="/cheldrins" element={<Cheldrins />} />
         <Route path="*" element={<Error />} />
       </Routes>

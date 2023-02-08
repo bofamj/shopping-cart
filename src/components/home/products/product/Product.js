@@ -55,7 +55,7 @@ const Product = ({ product }) => {
           item.id === product.id
             ? {
                 id: item.id,
-                imageUrl: item.imageUrl,
+                imageUrl: `https://${item.imageUrl}`,
                 name: item.brandName,
                 price: item.price.current.text,
                 value: item.price.current.value,
@@ -63,7 +63,7 @@ const Product = ({ product }) => {
               }
             : {
                 id: item.id,
-                imageUrl: item.imageUrl,
+                imageUrl: `https://${item.imageUrl}`,
                 brandName: item.brandName,
                 price: item.price.current.text,
                 value: item.price.current.value,
@@ -76,7 +76,7 @@ const Product = ({ product }) => {
         ...cart,
         {
           id,
-          imageUrl,
+          imageUrl: `https://${imageUrl}`,
           brandName,
           price: price.current.text,
           value: price.current.value,

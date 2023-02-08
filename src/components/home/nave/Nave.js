@@ -37,6 +37,9 @@ const Nave = () => {
                 <Link to="/woman" className="links drop-link">
                   Woman
                 </Link>
+                <Link to="/lingerie" className="links drop-link">
+                  Woman-lingerie
+                </Link>
                 <Link to="/cheldrins" className="links drop-link">
                   Cheldrins
                 </Link>

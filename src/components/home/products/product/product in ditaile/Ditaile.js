@@ -3,27 +3,26 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ditaile.css";
 import { productsData } from "../../../../../dummy/data";
-
+import DataContext from "../../../../../context/DataContext";
+import { useContext } from "react";
 const Ditaile = () => {
+  const { detaldProduct } = useContext(DataContext);
   let { id } = useParams();
-  let productId = Number(id);
-  console.log(useParams());
-  console.log(productId);
 
   return (
     <div>
-      {productsData.map((product) =>
-        product.id === productId ? (
+      {detaldProduct.map((product) =>
+        product.goods_id === id ? (
           <div className="ditile-continer">
             <div className="ditaile-img-continer">
-              <img src={product.image} alt="productimage" />
+              <img src={product.goods_img} alt="productimage" />
             </div>
-            <h1>{product.name}</h1>
+            <h1>{product.goods_name}</h1>
             <div className="ditile-dic-continer">
-              <p>{product.desc}</p>
+              <p>{product.goods_url_name}</p>
             </div>
             <div className="prics-and-riting">
-              <h1>$ {product.price}</h1>
+              <h1>$ {product.salePrice.amount}</h1>
               <span>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
@@ -41,3 +40,4 @@ const Ditaile = () => {
 };
 
 export default Ditaile;
+/*  */

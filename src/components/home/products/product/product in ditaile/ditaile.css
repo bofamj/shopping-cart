@@ -4,11 +4,19 @@
   color: black;
 }
 .ditaile-img-continer {
-  width: 25%;
+  width: 60%;
   overflow: hidden;
 }
 .ditaile-img-continer img {
   width: 100%;
+}
+.ditaile-img-wraper {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+.detaile__img {
+  width: 6.5rem;
 }
 .ditile-dic-continer {
   padding: 0.65em 7em 0.65em 0;

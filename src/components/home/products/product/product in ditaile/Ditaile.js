@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ditaile.css";
 import { productsData } from "../../../../../dummy/data";
 import DataContext from "../../../../../context/DataContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 const Ditaile = () => {
   const { detaldProduct } = useContext(DataContext);
+  const [corentImg, setcorentimg] = useState();
   let { id } = useParams();
-
+  const handelIndex = (e) => {
+    console.log("clicked", e.target.name);
+  };
   return (
     <div>
       {detaldProduct.map((product) =>
@@ -16,6 +19,16 @@ const Ditaile = () => {
           <div className="ditile-continer">
             <div className="ditaile-img-continer">
               <img src={product.goods_img} alt="productimage" />
+            </div>
+            <div className="ditaile-img-wraper" onClick={(e) => handelIndex(e)}>
+              {product.detail_image.map((image, index) => (
+                <img
+                  src={image}
+                  name={index}
+                  alt="productimage"
+                  className="detaile__img"
+                />
+              ))}
             </div>
             <h1>{product.goods_name}</h1>
             <div className="ditile-dic-continer">

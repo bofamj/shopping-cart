@@ -11,11 +11,13 @@ const useFetch = (url, params, RapidAPIHost) => {
       method: "GET",
       params: params,
       headers: {
-        "X-RapidAPI-Key": "3cace6a128msh3b60c4110624461p16e8f0jsna4e59d6640d6",
+        "X-RapidAPI-Key":
+          "b32d0aeec2msh5375c79ffa37829p134aa0jsn6448278abafb" /* "3cace6a128msh3b60c4110624461p16e8f0jsna4e59d6640d6" */,
         "X-RapidAPI-Host": RapidAPIHost,
       },
     });
     const data = await response.json();
+
     setFetchAllProducts(data.info.products);
     setFetchProducts(data.products);
 

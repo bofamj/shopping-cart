@@ -33,8 +33,19 @@ const Hero = () => {
       >
         {heroImg.map((img) => {
           return (
-            <SwiperSlide>
-              <img src={img.img} alt="hero" />;
+            <SwiperSlide className="swiper-slide">
+              <img src={img.img} alt="hero" className="swiper-slide__img" />
+              <div className="text-container">
+                <p>SHAYO FASHION PRESENTS</p>
+                <h1>
+                  REDFINING <span>{img.cat}</span> WEAR
+                </h1>
+                <p className="second-pargrafe">
+                  From the new trench to statement overshirts, it’s definitely
+                  time to embrace jacket season.
+                </p>
+                <button className="hero-button">SHOP NOW</button>
+              </div>
             </SwiperSlide>
           );
         })}
@@ -43,17 +54,6 @@ const Hero = () => {
           <svg viewBox="0 0 48 48" ref={progressCircle}>
             <circle cx="24" cy="24" r="20"></circle>
           </svg>
-        </div>
-        <div className="text-container">
-          <p>SHAYO FASHION PRESENTS</p>
-          <h1>
-            REDEFINING <span>PARTY</span> WEAR
-          </h1>
-          <p className="second-pargrafe">
-            From the new trench to statement overshirts, it’s definitely time to
-            embrace jacket season.
-          </p>
-          <button className="hero-button">SHOP NOW</button>
         </div>
       </Swiper>
     </section>

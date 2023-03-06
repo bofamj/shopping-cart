@@ -7,9 +7,8 @@ element.style {
 
 .hero-continer {
   width: 100%;
-  height: 600px;
-  position: relative;
-  margin-top: 10px;
+  /* position: relative; */
+  /*  margin-top: 10px; */
 }
 .iner-container {
   width: 100%;
@@ -26,6 +25,7 @@ element.style {
 .text-container {
   width: 50%;
   position: absolute;
+  text-align: start;
   top: 20%;
   left: 5%;
 }
@@ -91,27 +91,37 @@ element.style {
 }
 /**/
 .swiper {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-
-.swiper-slide img {
+.mySwiper {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.swiper-slide__img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: inherit;
 }
+/* .swiper-slide__img {
+  margin-top: 10px;
+  height: 100%;
+  object-fit: cover;
+  align-content: first baseline;
+} */
 
 .autoplay-progress {
   position: absolute;

@@ -20,7 +20,7 @@ const useFetch = (url, params, RapidAPIHost) => {
 
     setFetchAllProducts(data.info.products);
     setFetchProducts(data.products);
-
+    //console.log(data.info.products);
     setLodding(false);
   };
   useEffect(() => {

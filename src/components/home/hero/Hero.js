@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
-import banner from "../../.././assets/banner-4.jpg";
 import "./hero.css";
 import { heroImg } from "../../../dummy/heroImg";
 

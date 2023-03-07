@@ -1,0 +1,27 @@
+.whatWeDo {
+  background-color: #e8e8e8;
+  padding: 13rem 15rem 10rem 15rem;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  margin-top: -5rem;
+  z-index: 1;
+  position: relative;
+}
+.whatWeDo__box {
+  width: 65%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+}
+.whatWeDo__title {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  line-height: 5rem;
+  font-weight: 100;
+}
+.whatWeDo__content {
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}

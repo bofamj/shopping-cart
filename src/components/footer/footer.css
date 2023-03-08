@@ -1,0 +1,34 @@
+.footer {
+  padding: 2.5rem 5rem 12rem 5rem;
+  background-color: #20214e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__img {
+  width: 10%;
+}
+.footer--box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footer__nav {
+  width: 40%;
+  margin-right: 4.5rem;
+}
+.footer__nav-items {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__nav--tag {
+  display: inline-block;
+}
+.footer__copy-write {
+  width: 40%;
+  margin-left: 4.5rem;
+}

@@ -12,6 +12,7 @@ import Cheldrins from "./pages/Cheldrins";
 import Man from "./pages/Man";
 import Women from "./pages/Women";
 import WomenLingerie from "./pages/WomenLingerie";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/cheldrins" element={<Cheldrins />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </DataProvider>
   );
 }

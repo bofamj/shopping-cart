@@ -1,10 +1,10 @@
 .whatWeDo {
   background-color: #e8e8e8;
-  padding: 13rem 15rem 10rem 15rem;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  padding: 20rem 15rem 0rem 15rem;
   margin-top: -5rem;
   z-index: 1;
   position: relative;
+  color: #383838;
 }
 .whatWeDo__box {
   width: 65%;
@@ -13,8 +13,10 @@
   left: 50%;
   transform: translate(-50%, -30%);
   text-align: center;
+  border-bottom: 0.5px solid #383838;
+  padding-bottom: 10rem;
 }
-.whatWeDo__title {
+.heading__title {
   text-transform: capitalize;
   font-size: 2.5rem;
   letter-spacing: 0.5rem;

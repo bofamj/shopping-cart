@@ -3,7 +3,7 @@ const WhatWeDo = () => {
   return (
     <section className="whatWeDo">
       <div className="whatWeDo__box">
-        <h1 className="whatWeDo__title">what we do</h1>
+        <h1 className="heading__title ">what we do</h1>
         <p className="whatWeDo__content">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi qui
           assumenda voluptate delectus, excepturi saepe nisi explicabo! Quisquam

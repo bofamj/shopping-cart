@@ -67,9 +67,12 @@ element.style {
   cursor: pointer;
   margin-top: 2em;
   border: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
 }
 .hero-button:hover {
   background-color: #ae5613;
+  transform: scale(1.1);
 }
 
 .text-container {
